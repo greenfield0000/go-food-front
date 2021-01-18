@@ -17,7 +17,7 @@ export const environment = {
 
   gatePath: {
     // запросы к модулю авторизации, регистрации, логину и т.д.
-    auth_location: 'http://localhost:8080/auth',
+    auth_location: 'http://localhost:8081/auth',
     // запросы к модулю меню
     menu_location: 'http://localhost:8080/menu-gate',
     // запросы к модулю журнала

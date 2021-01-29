@@ -40,8 +40,7 @@ export class HttpService {
    */
   public post<T>(url: string, params: any = {}, headers: HttpHeaders = environment.headers): Observable<T> {
     const options = {
-      headers: headers,
-      withCredentials: true 
+      headers: headers
     };
     return this.http.post<T>(url, params, options).pipe(
       switchMap((res) => this.handleResponse(res)),

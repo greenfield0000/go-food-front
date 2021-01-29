@@ -18,6 +18,7 @@ export class HeaderOutletComponent implements OnInit {
     private menuService: MenuService) { }
 
   ngOnInit() {
+    debugger;
     this.account = this.appAccountContextService.getAccount();
     this.menuService.initialize();
   }

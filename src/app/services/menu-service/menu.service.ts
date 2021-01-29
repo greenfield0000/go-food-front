@@ -5,6 +5,7 @@ import { Injectable, OnInit } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { MenuNode } from 'src/app/classes/menu-node';
 import { SimpleResult } from 'src/app/utils/simple-result.class';
+import { HttpService } from '../http-service/http.service';
 
 /**
  * File database, it can build a tree structured Json object from string.
@@ -22,7 +23,7 @@ export class MenuService {
 
   get data(): MenuNode[] { return this.dataChange.value; }
 
-  constructor(private http: HttpClient, private accountService: AppAccountContextService) {
+  constructor(private http: HttpService, private accountService: AppAccountContextService) {
 //    this.initialize();
   }
 

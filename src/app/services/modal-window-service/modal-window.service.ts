@@ -14,6 +14,7 @@ export class ModalWindowService implements OnDestroy {
   private dialogComponent: IDialog;
   private windowWidthPX: string = '800';
   private windowHeightPX: string = '500';
+  private dialogRef: MatDialogRef<IDialog, any>;
 
   constructor(public dialog: MatDialog) { }
 
@@ -21,17 +22,19 @@ export class ModalWindowService implements OnDestroy {
     dataContext = dataContext ? dataContext : {};
     this.dialogComponent = dialogComponent.prototype;
     this.dialogComponent.type = type;
-    const dialogRef = this.dialog.open(dialogComponent, {
-      data: dataContext,
-      maxWidth: this.windowWidthPX,
-      maxHeight: this.windowHeightPX,
-      width: this.windowWidthPX,
-      height: this.windowWidthPX
-    });
-
-    const closed: Observable<any> = dialogRef.afterClosed();
+    if (!this.dialogRef) {
+      this.dialogRef = this.dialog.open(dialogComponent, {
+        data: dataContext,
+        maxWidth: this.windowWidthPX,
+        maxHeight: this.windowHeightPX,
+        width: this.windowWidthPX,
+        height: this.windowWidthPX
+      });
+    }
+  
+    const closed: Observable<any> = this.dialogRef.afterClosed();
     this.subscriptions.push(closed.subscribe(result => {
-      console.log('The dialog was closed');
+      this.dialogRef = null;
     }));
 
     return closed;

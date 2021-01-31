@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
 
   private account: AccountEntity = new AccountEntity();
 
-  @ViewChild('menuNavigator')
+  @ViewChild('menuNavigator', { static: true })
   private menuNavigator: MatSidenav;
 
   constructor(private sideNavService: MainSideNavService, private appContextService: AppAccountContextService) {

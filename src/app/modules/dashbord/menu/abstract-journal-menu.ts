@@ -17,7 +17,7 @@ export class AbstractJournalMenu<T> implements OnInit, IJournal<T> {
     protected className = 'form';
 
     public journalHeader: string = "";
-    @ViewChild('journal') journal: JournalComponent<T>;
+    @ViewChild('journal', { static: true }) journal: JournalComponent<T>;
 
     protected _appRouterService: AppRouteService;
     protected _personalService: PersonalService;

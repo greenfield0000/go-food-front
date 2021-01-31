@@ -18,6 +18,15 @@ import { VacationScheduleComponent } from './vacation-schedule/vacation-schedule
 import { ProfessionalStaffTrainingComponent } from './professional-staff-training/professional-staff-training.component';
 import { PersonalModule } from './personal/personal.module';
 import { DishComponent } from './dish/dish.component';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import timeGridPlugin from '@fullcalendar/timegrid';
+import interactionPlugin from '@fullcalendar/interaction';
+
+FullCalendarModule.registerPlugins([
+    dayGridPlugin,
+    timeGridPlugin,
+    interactionPlugin
+  ])
 
 @NgModule({
     declarations: [

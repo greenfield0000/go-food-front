@@ -1,5 +1,4 @@
 import { FullCalendarModule } from '@fullcalendar/angular';
-import { MatPaginatorModule, MatProgressSpinnerModule, MatMenuModule, MatSidenavModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatSelectModule, MatOptionModule } from '@angular/material';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -21,30 +20,31 @@ import { PersonalModule } from './personal/personal.module';
 import { DishComponent } from './dish/dish.component';
 
 @NgModule({
-  declarations: [
-    // menu (menu pages) component
-    DashbordComponent,
-    ReservationsComponent,
-    WorkScheduleComponent,
-    OrdersComponent,
-    SuggestNewsComponent,
-    StopSheetComponent,
-    MenuComponent,
-    DeliveryComponent,
-    MasterClassesComponent,
-    FestivalsComponent,
-    PurchasesComponent,
-    VacationScheduleComponent,
-    ProfessionalStaffTrainingComponent,
-    DishComponent
-  ],
-  imports: [
-    CommonModule,
-    MenuRoutingModule,
-    RouterModule,
-    // JournalsModule
-    PersonalModule,
-    FullCalendarModule
-  ]
+    declarations: [
+        // menu (menu pages) component
+        DashbordComponent,
+        ReservationsComponent,
+        WorkScheduleComponent,
+        OrdersComponent,
+        SuggestNewsComponent,
+        StopSheetComponent,
+        MenuComponent,
+        DeliveryComponent,
+        MasterClassesComponent,
+        FestivalsComponent,
+        PurchasesComponent,
+        VacationScheduleComponent,
+        ProfessionalStaffTrainingComponent,
+        DishComponent
+    ],
+    imports: [
+        CommonModule,
+        MenuRoutingModule,
+        RouterModule,
+        // JournalsModule
+        PersonalModule,
+        FullCalendarModule
+    ]
 })
-export class MenuModule { }
+export class MenuModule {
+}

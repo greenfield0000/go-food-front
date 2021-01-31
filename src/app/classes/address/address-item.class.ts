@@ -1,6 +1,5 @@
 import { AddressItemType } from 'src/app/components/address-kladr/model/address-emiter.model';
 import { AddressModel } from '../../components/address-kladr/model/address.model';
-import { AddressEmmiter } from '../../components/address-kladr/model/address-emiter.model';
 
 export class AddressItem {
     private cadnum: string;
@@ -16,6 +15,7 @@ export class AddressItem {
     private type: string;
     private typeShort: string;
     private zip: number;
+
     constructor(data?: AddressModel) {
         if (data) {
             this.cadnum = data.cadnum;

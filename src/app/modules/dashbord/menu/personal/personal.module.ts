@@ -8,56 +8,66 @@ import { JournalComponent } from 'src/app/components/journal/journal.component';
 import { FilterPanelComponent } from 'src/app/components/journal/filter-panel/filter-panel.component';
 import { AgGridModule } from 'ag-grid-angular';
 import { RowNumberRenderer } from 'src/app/components/journal/cell-renders/rownumber-renderer.component';
-import { MatPaginatorModule, MatProgressSpinnerModule, MatMenuModule, MatSidenavModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatSelectModule, MatOptionModule, MatDatepickerModule } from '@angular/material';
+import { MatButtonModule } from '@angular/material/button';
+import { MatOptionModule } from '@angular/material/core';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { PersonInfoEditorComponent } from 'src/app/components/person-info-editor/person-info-editor.component';
 import { AuthModule } from 'src/app/modules/auth/auth.module';
 import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [
-    PersonalComponent,
-    PersonalAddComponent,
-    PersonalEditComponent,
-    // common components for journals
-    JournalComponent,
-    FilterPanelComponent,
-    RowNumberRenderer,
-    // person components
-    PersonInfoEditorComponent,
-  ],
-  imports: [
-    CommonModule,
-    PersonalRoutingModule,
+    declarations: [
+        PersonalComponent,
+        PersonalAddComponent,
+        PersonalEditComponent,
+        // common components for journals
+        JournalComponent,
+        FilterPanelComponent,
+        RowNumberRenderer,
+        // person components
+        PersonInfoEditorComponent,
+    ],
+    imports: [
+        CommonModule,
+        PersonalRoutingModule,
 
-    // Material
-    MatPaginatorModule,
-    MatProgressSpinnerModule,
-    MatMenuModule,
-    MatSidenavModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-    MatSelectModule,
-    MatOptionModule,
-    MatSidenavModule,
-    MatButtonModule,
-    MatDatepickerModule,
-    MatFormFieldModule,
-    MatProgressSpinnerModule,
-    MatInputModule,
-    MatSelectModule,
+        // Material
+        MatPaginatorModule,
+        MatProgressSpinnerModule,
+        MatMenuModule,
+        MatSidenavModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatButtonModule,
+        MatSelectModule,
+        MatOptionModule,
+        MatSidenavModule,
+        MatButtonModule,
+        MatDatepickerModule,
+        MatFormFieldModule,
+        MatProgressSpinnerModule,
+        MatInputModule,
+        MatSelectModule,
 
-    // Angular Ag-grid
-    AgGridModule.withComponents([RowNumberRenderer]),
+        // Angular Ag-grid
+        AgGridModule.withComponents([RowNumberRenderer]),
 
-    AuthModule,
-    ReactiveFormsModule
-  ],
-  exports: [
-    // common components
-    JournalComponent,
-    FilterPanelComponent,
-    RowNumberRenderer
-  ]
+        AuthModule,
+        ReactiveFormsModule
+    ],
+    exports: [
+        // common components
+        JournalComponent,
+        FilterPanelComponent,
+        RowNumberRenderer
+    ]
 })
-export class PersonalModule { }
+export class PersonalModule {
+}

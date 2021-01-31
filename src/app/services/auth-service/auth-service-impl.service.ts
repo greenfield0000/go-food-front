@@ -1,4 +1,4 @@
-import { map, switchMap } from 'rxjs/operators';
+import { switchMap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { AccountEntity } from 'src/app/classes/accountEntity';
 import { Injectable } from '@angular/core';
@@ -11,51 +11,51 @@ import { HttpService } from '../http-service/http.service';
  * Сервис авторизации и регистрации пользователей в системе
  */
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class AuthServiceImpl implements Auth {
 
-  constructor(private _httpService: HttpService) { }
-
-  /**
-   * Выйти из системы
-   */
-  signOut(accountEntity: AccountEntity, url?: string): Observable<SimpleResult<AccountEntity>> {
-    if (!url) {
-      url = environment.gatePath.auth_location + '/logout';
+    constructor(private _httpService: HttpService) {
     }
-    return this._httpService.post<SimpleResult<AccountEntity>>(url, accountEntity, environment.headers);
-  }
 
-  /**
-   * Войти в систему
-   */
-  signIn(accountEntity: AccountEntity, url?: string): Observable<AccountEntity> {
-    if (!url) {
-      url = environment.gatePath.auth_location + '/login';
-    }
-    const signInStrean = this._httpService.post<SimpleResult<AccountEntity>>(url, JSON.stringify(accountEntity), environment.headers);
-
-    return signInStrean.pipe(
-      switchMap(simpleAccountResult => {
-        let account: AccountEntity = new AccountEntity(); 
-        if (simpleAccountResult && simpleAccountResult.result) {
-          account = simpleAccountResult.result;
+    /**
+     * Выйти из системы
+     */
+    signOut(accountEntity: AccountEntity, url?: string): Observable<SimpleResult<AccountEntity>> {
+        if (!url) {
+            url = environment.gatePath.auth_location + '/logout';
         }
-        return of(account);
-      })
-    
-    );
-  }
-
-  /**
-   * Зарегистрироваться в системе
-   */
-  registry(accountEntity: AccountEntity, url?: string): Observable<SimpleResult<AccountEntity>> {
-    if (!url) {
-      url = environment.gatePath.auth_location + '/registry';
+        return this._httpService.post<SimpleResult<AccountEntity>>(url, accountEntity, environment.headers);
     }
-    return this._httpService.post<SimpleResult<AccountEntity>>(url, JSON.stringify(accountEntity), environment.headers);
-  }
+
+    /**
+     * Войти в систему
+     */
+    signIn(accountEntity: AccountEntity, url?: string): Observable<AccountEntity> {
+        if (!url) {
+            url = environment.gatePath.auth_location + '/login';
+        }
+        const signInStrean = this._httpService.post<SimpleResult<AccountEntity>>(url, JSON.stringify(accountEntity), environment.headers);
+
+        return signInStrean.pipe(
+            switchMap(simpleAccountResult => {
+                let account: AccountEntity = new AccountEntity();
+                if (simpleAccountResult && simpleAccountResult.result) {
+                    account = simpleAccountResult.result;
+                }
+                return of(account);
+            })
+        );
+    }
+
+    /**
+     * Зарегистрироваться в системе
+     */
+    registry(accountEntity: AccountEntity, url?: string): Observable<SimpleResult<AccountEntity>> {
+        if (!url) {
+            url = environment.gatePath.auth_location + '/registry';
+        }
+        return this._httpService.post<SimpleResult<AccountEntity>>(url, JSON.stringify(accountEntity), environment.headers);
+    }
 
 }

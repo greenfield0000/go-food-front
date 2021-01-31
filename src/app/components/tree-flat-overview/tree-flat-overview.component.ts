@@ -2,7 +2,7 @@ import { AppRouteService } from './../../services/app-route-service/app-route.se
 import { MenuService } from './../../services/menu-service/menu.service';
 import { Component, OnInit } from '@angular/core';
 import { FlatTreeControl } from '@angular/cdk/tree';
-import { MatTreeFlattener, MatTreeFlatDataSource } from '@angular/material';
+import { MatTreeFlattener, MatTreeFlatDataSource } from '@angular/material/tree';
 import { Observable, of as observableOf } from 'rxjs';
 import { MenuFlatNode } from 'src/app/classes/menu-flat-node';
 import { MenuNode } from 'src/app/classes/menu-node';

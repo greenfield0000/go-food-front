@@ -35,7 +35,7 @@ export class JournalComponent<T> implements OnInit {
   @Input()
   public journalHeader: string;
 
-  @ViewChild('agGrid', { static: false }) agGrid: AgGridNg2;
+  @ViewChild('agGrid') agGrid: AgGridNg2;
   @ViewChild('journalFilterNavigator', { static: true })
   public journalFilterNavigator: MatSidenav;
   public columnMetaDataSubject: Subject<ColumnMetaData> = new BehaviorSubject<ColumnMetaData>(new ColumnMetaData());

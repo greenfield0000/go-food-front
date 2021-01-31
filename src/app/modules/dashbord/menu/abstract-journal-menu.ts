@@ -1,4 +1,4 @@
-import { OnInit, ViewChild, Injector, HostBinding } from "@angular/core";
+import { OnInit, ViewChild, Injector, HostBinding, Directive } from "@angular/core";
 import { IJournal } from "src/app/components/journal/journal.interface";
 import { JournalComponent } from "src/app/components/journal/journal.component";
 import { AppRouteService } from "src/app/services/app-route-service/app-route.service";
@@ -10,6 +10,7 @@ import { ModalWindowService } from "src/app/services/modal-window-service/modal-
 /**
  * Общий абстрактный класс для журналов
  */
+@Directive()
 export class AbstractJournalMenu<T> implements OnInit, IJournal<T> {
 
 

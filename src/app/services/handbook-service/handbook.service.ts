@@ -12,12 +12,13 @@ import { Injectable } from '@angular/core';
  *
  */
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class HandbookService {
 
-  // функционал отложен до реализации сервиса сессий
+    // функционал отложен до реализации сервиса сессий
 
-  constructor() { }
+    constructor() {
+    }
 
 }

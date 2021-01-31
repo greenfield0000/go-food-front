@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation, Inject } from '@angular/core';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { IDialog } from 'src/app/services/modal-window-service/idialog';
 import { IDialogType } from 'src/app/services/modal-window-service/idialog.type';
 

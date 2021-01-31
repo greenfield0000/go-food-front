@@ -4,7 +4,7 @@ import { SimpleResult } from './../../utils/simple-result.class';
 import { BehaviorSubject, Subject, Observable, of, observable } from 'rxjs';
 import { JournalService } from './../../services/journal-service/journal.service';
 import { AppAccountContextService } from './../../services/app-account-context-service/app-account-context.service';
-import { MatSidenav } from '@angular/material';
+import { MatSidenav } from '@angular/material/sidenav';
 import { MainSideNavService } from 'src/app/services/main-side-nav-service/main-side-nav.service';
 import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { AgGridNg2 } from 'ag-grid-angular';

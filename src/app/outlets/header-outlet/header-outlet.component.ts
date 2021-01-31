@@ -5,47 +5,47 @@ import { MainSideNavService } from 'src/app/services/main-side-nav-service/main-
 import { MenuService } from 'src/app/services/menu-service/menu.service';
 
 @Component({
-  selector: 'app-header-outlet',
-  templateUrl: './header-outlet.component.html',
-  styleUrls: ['./header-outlet.component.scss']
+    selector: 'app-header-outlet',
+    templateUrl: './header-outlet.component.html',
+    styleUrls: ['./header-outlet.component.scss']
 })
 export class HeaderOutletComponent implements OnInit {
 
-  public account: AccountEntity = new AccountEntity();
+    public account: AccountEntity = new AccountEntity();
 
-  constructor(private sideNavService: MainSideNavService,
-    private appAccountContextService: AppAccountContextService,
-    private menuService: MenuService) { }
-
-  ngOnInit() {
-    debugger;
-    this.account = this.appAccountContextService.getAccount();
-    this.menuService.initialize();
-  }
-
-  /**
-   * switch menu toggle
-   */
-  public sideNavToggle() {
-    if (this.sideNavService.$menuNavigatorDrawer) {
-      this.sideNavService.drawerToggle(this.sideNavService.$menuNavigatorDrawer);
+    constructor(private sideNavService: MainSideNavService,
+                private appAccountContextService: AppAccountContextService,
+                private menuService: MenuService) {
     }
-  }
 
-  /**
-   * Edit account profile
-   */
-  public editAccount() {
+    ngOnInit() {
+        this.account = this.appAccountContextService.getAccount();
+        this.menuService.initialize();
+    }
 
-  }
+    /**
+     * switch menu toggle
+     */
+    public sideNavToggle() {
+        if (this.sideNavService.$menuNavigatorDrawer) {
+            this.sideNavService.drawerToggle(this.sideNavService.$menuNavigatorDrawer);
+        }
+    }
 
-  /**
-   * Exit application
-   */
-  public signOut() {
-    this.sideNavService.journalFilterDrawerClose();
-    this.sideNavService.menuNavigatorDrawerClose();
-    this.appAccountContextService.logOut();
-  }
+    /**
+     * Edit account profile
+     */
+    public editAccount() {
+
+    }
+
+    /**
+     * Exit application
+     */
+    public signOut() {
+        this.sideNavService.journalFilterDrawerClose();
+        this.sideNavService.menuNavigatorDrawerClose();
+        this.appAccountContextService.logOut();
+    }
 
 }

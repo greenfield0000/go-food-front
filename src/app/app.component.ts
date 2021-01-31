@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { MatSidenav } from '@angular/material';
+import { MatSidenav } from '@angular/material/sidenav';
 import { MainSideNavService } from './services/main-side-nav-service/main-side-nav.service';
 import { AccountEntity } from './classes/accountEntity';
 import { AppAccountContextService } from './services/app-account-context-service/app-account-context.service';

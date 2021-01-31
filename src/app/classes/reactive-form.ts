@@ -1,7 +1,9 @@
 export abstract class ReactiveForm {
-    constructor() { }
+    constructor() {
+    }
+
     /**
-   * Метод регистрации подписок формы
-   */
+     * Метод регистрации подписок формы
+     */
     protected abstract registrySubscription(): void;
 }

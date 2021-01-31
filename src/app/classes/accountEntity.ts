@@ -53,7 +53,7 @@ export class AccountEntity {
      */
     public get $password(): string {
         return this.password;
-    }   
+    }
 
     /**
      * Getter $nickName

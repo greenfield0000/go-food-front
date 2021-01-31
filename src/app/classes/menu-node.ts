@@ -1,5 +1,3 @@
-
-
 /**
  * Menu node data with nested structure.
  * Each node has a Menuname, and a type or a list of children.

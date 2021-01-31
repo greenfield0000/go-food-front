@@ -1,4 +1,3 @@
-
 /** Flat node with expandable and level information */
 export class MenuFlatNode {
 

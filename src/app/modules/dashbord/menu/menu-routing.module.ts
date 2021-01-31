@@ -18,27 +18,28 @@ import { DishComponent } from './dish/dish.component';
 
 const routes: Routes = [
 
-  {
-    path: '', component: DashbordComponent
-  },
-  { path: 'delivery', component: DeliveryComponent },
-  { path: 'festivals', component: FestivalsComponent },
-  { path: 'master-classes', component: MasterClassesComponent },
-  { path: 'orders', component: OrdersComponent },
-  { path: 'personal', loadChildren: () => PersonalModule },
-  { path: 'menu', component: MenuComponent },
-  { path: 'professional-staff-training', component: ProfessionalStaffTrainingComponent },
-  { path: 'purchases', component: PurchasesComponent },
-  { path: 'reservations', component: ReservationsComponent },
-  { path: 'stop-sheet', component: StopSheetComponent },
-  { path: 'suggest-news', component: SuggestNewsComponent },
-  { path: 'vacation-schedule', component: VacationScheduleComponent },
-  { path: 'work-schedule', component: WorkScheduleComponent },
-  { path: 'dish', component: DishComponent }
+    {
+        path: '', component: DashbordComponent
+    },
+    {path: 'delivery', component: DeliveryComponent},
+    {path: 'festivals', component: FestivalsComponent},
+    {path: 'master-classes', component: MasterClassesComponent},
+    {path: 'orders', component: OrdersComponent},
+    {path: 'personal', loadChildren: () => PersonalModule},
+    {path: 'menu', component: MenuComponent},
+    {path: 'professional-staff-training', component: ProfessionalStaffTrainingComponent},
+    {path: 'purchases', component: PurchasesComponent},
+    {path: 'reservations', component: ReservationsComponent},
+    {path: 'stop-sheet', component: StopSheetComponent},
+    {path: 'suggest-news', component: SuggestNewsComponent},
+    {path: 'vacation-schedule', component: VacationScheduleComponent},
+    {path: 'work-schedule', component: WorkScheduleComponent},
+    {path: 'dish', component: DishComponent}
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forChild(routes)],
+    exports: [RouterModule]
 })
-export class MenuRoutingModule { }
+export class MenuRoutingModule {
+}

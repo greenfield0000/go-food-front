@@ -36,6 +36,7 @@ export class AppAccountContextService {
     logOut() {
         this._authService.signOut(this._account)
             .subscribe((simpleResult: SimpleResult<AccountEntity>) => {
+                this.cookieService.deleteAll();
                 this._account = (simpleResult && simpleResult.result) ? new AccountEntity(simpleResult.result) : new AccountEntity();
                 this.temp.goTo('/');
             });

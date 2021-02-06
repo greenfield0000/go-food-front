@@ -1,8 +1,8 @@
-import { AccountEntity } from './../../classes/accountEntity';
-import { AppAccountContextService } from './../../services/app-account-context-service/app-account-context.service';
-import { Component, OnInit } from '@angular/core';
-import { MainSideNavService } from 'src/app/services/main-side-nav-service/main-side-nav.service';
-import { MenuService } from 'src/app/services/menu-service/menu.service';
+import {AccountEntity} from './../../classes/accountEntity';
+import {AppAccountContextService} from './../../services/app-account-context-service/app-account-context.service';
+import {Component, OnInit} from '@angular/core';
+import {MainSideNavService} from 'src/app/services/main-side-nav-service/main-side-nav.service';
+import {MenuService} from 'src/app/services/menu-service/menu.service';
 
 @Component({
     selector: 'app-header-outlet',

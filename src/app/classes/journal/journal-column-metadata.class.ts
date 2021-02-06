@@ -1,4 +1,4 @@
-import { JornalColumn } from './jornal-column.class';
+import {JornalColumn} from './jornal-column.class';
 
 export class ColumnMetaData {
     private id: string;
@@ -26,43 +26,19 @@ export class ColumnMetaData {
     }
 
     /**
-     * Getter $note
-     * @return {String}
-     */
-    public get $note(): String {
-        return this.note;
-    }
-
-    /**
-     * Getter $sysName
-     * @return {String}
-     */
-    public get $sysName(): String {
-        return this.sysName;
-    }
-
-    /**
-     * Getter $ownerRole
-     * @return {String[]}
-     */
-    public get $ownerRole(): String[] {
-        return this.ownerRole;
-    }
-
-    /**
-     * Getter $list
-     * @return {JournalColumn[]}
-     */
-    public get $list(): JornalColumn[] {
-        return this.list;
-    }
-
-    /**
      * Setter $id
      * @param {string} value
      */
     public set $id(value: string) {
         this.id = value;
+    }
+
+    /**
+     * Getter $note
+     * @return {String}
+     */
+    public get $note(): String {
+        return this.note;
     }
 
     /**
@@ -74,6 +50,14 @@ export class ColumnMetaData {
     }
 
     /**
+     * Getter $sysName
+     * @return {String}
+     */
+    public get $sysName(): String {
+        return this.sysName;
+    }
+
+    /**
      * Setter $sysName
      * @param {String} value
      */
@@ -82,11 +66,27 @@ export class ColumnMetaData {
     }
 
     /**
+     * Getter $ownerRole
+     * @return {String[]}
+     */
+    public get $ownerRole(): String[] {
+        return this.ownerRole;
+    }
+
+    /**
      * Setter $ownerRole
      * @param {String[]} value
      */
     public set $ownerRole(value: String[]) {
         this.ownerRole = value;
+    }
+
+    /**
+     * Getter $list
+     * @return {JournalColumn[]}
+     */
+    public get $list(): JornalColumn[] {
+        return this.list;
     }
 
     /**

@@ -1,35 +1,45 @@
-import { environment } from 'src/environments/environment';
-import { Injectable } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
-import { SimpleResult } from 'src/app/utils/simple-result.class';
-import { JournalMetadata } from 'src/app/classes/journal/journal-metadata.class';
-import { HttpService } from '../http-service/http.service';
-import { IJournal } from 'src/app/components/journal/journal.interface';
+import {environment} from 'src/environments/environment';
+import {Injectable} from '@angular/core';
+import {Observable, Subject} from 'rxjs';
+import {SimpleResult} from 'src/app/utils/simple-result.class';
+import {JournalMetadata} from 'src/app/classes/journal/journal-metadata.class';
+import {HttpService} from '../http-service/http.service';
+import {IJournal} from 'src/app/components/journal/journal.interface';
 
 @Injectable({
     providedIn: 'root'
 })
 export class JournalService {
 
-    private _context: IJournal<any>;
-    private _journalLoadData: Subject<SimpleResult<any>> = new Subject<SimpleResult<any>>();
-
     constructor(private http: HttpService) {
     }
 
+    private _context: IJournal<any>;
+
     /**
-     * Общий метод для вызова сервисных функций журнала
-     * @param methodName имя метода, который вызывается
-     * @param postParams параметры вызова (у каждого метода могут быть свои)
+     * Getter context
+     * @return {IJournal}
      */
-    private post<T>(methodName, postParams?: any): Observable<SimpleResult<T>> {
-        if (!postParams) {
-            postParams = {};
-        }
-        return this.http
-            .post<SimpleResult<T>>(
-                environment.gatePath.journal_location + '/' + methodName, postParams
-            );
+    public get context(): IJournal<any> {
+        return this._context;
+    }
+
+    /**
+     * Setter context
+     * @param {IJournal} value
+     */
+    public set context(value: IJournal<any>) {
+        this._context = value;
+    }
+
+    private _journalLoadData: Subject<SimpleResult<any>> = new Subject<SimpleResult<any>>();
+
+    /**
+     * Getter journalLoadData
+     * @return {Subject<SimpleResult<any>> }
+     */
+    public get journalLoadData(): Subject<SimpleResult<any>> {
+        return this._journalLoadData;
     }
 
     /**
@@ -73,27 +83,18 @@ export class JournalService {
     }
 
     /**
-     * Getter journalLoadData
-     * @return {Subject<SimpleResult<any>> }
+     * Общий метод для вызова сервисных функций журнала
+     * @param methodName имя метода, который вызывается
+     * @param postParams параметры вызова (у каждого метода могут быть свои)
      */
-    public get journalLoadData(): Subject<SimpleResult<any>> {
-        return this._journalLoadData;
-    }
-
-    /**
-     * Getter context
-     * @return {IJournal}
-     */
-    public get context(): IJournal<any> {
-        return this._context;
-    }
-
-    /**
-     * Setter context
-     * @param {IJournal} value
-     */
-    public set context(value: IJournal<any>) {
-        this._context = value;
+    private post<T>(methodName, postParams?: any): Observable<SimpleResult<T>> {
+        if (!postParams) {
+            postParams = {};
+        }
+        return this.http
+            .post<SimpleResult<T>>(
+                environment.gatePath.journal_location + '/' + methodName, postParams
+            );
     }
 
 }

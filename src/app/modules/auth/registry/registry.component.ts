@@ -1,10 +1,10 @@
-import { AccountEntity } from 'src/app/classes/accountEntity';
-import { AppAccountContextService } from './../../../services/app-account-context-service/app-account-context.service';
-import { AppRouteService } from './../../../services/app-route-service/app-route.service';
-import { Component, Inject, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
-import { RegistryStepperComponent } from 'src/app/components/registy-stepper/registry-stepper.component';
-import { SimpleResult } from 'src/app/utils/simple-result.class';
+import {AccountEntity} from 'src/app/classes/accountEntity';
+import {AppAccountContextService} from './../../../services/app-account-context-service/app-account-context.service';
+import {AppRouteService} from './../../../services/app-route-service/app-route.service';
+import {Component, Inject, OnInit} from '@angular/core';
+import {FormBuilder} from '@angular/forms';
+import {RegistryStepperComponent} from 'src/app/components/registy-stepper/registry-stepper.component';
+import {SimpleResult} from 'src/app/utils/simple-result.class';
 
 @Component({
     selector: 'app-registry',

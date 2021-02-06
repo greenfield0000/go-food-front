@@ -46,6 +46,10 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { DialogComponent } from './components/modal-window/common/dialog/dialog.component';
 import { JwtTokenInterceptor } from './interceptors/jwt.token-interceptor';
 import { AuthModule } from './modules/auth/auth.module';
+import {JournalComponent} from './components/journal/journal.component';
+import {FilterPanelComponent} from './components/journal/filter-panel/filter-panel.component';
+import {RowNumberRenderer} from './components/journal/cell-renders/rownumber-renderer.component';
+import {CommonComponentModule} from './components/common-component.module';
 
 
 const modules = [
@@ -98,18 +102,20 @@ const modules = [
     MatCheckboxModule,
     MatBadgeModule,
 
+    CommonComponentModule
 ];
 
 @NgModule({
     declarations: [
         AppComponent,
         TreeFlatOverviewComponent,
-        DialogComponent
+        DialogComponent,
     ],
     imports: modules,
     exports: [
         modules,
-        AuthModule
+        AuthModule,
+        CommonComponentModule
     ],
     providers: [
         AgGridModule,

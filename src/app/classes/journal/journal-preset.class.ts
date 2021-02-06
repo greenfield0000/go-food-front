@@ -32,22 +32,6 @@ export class Preset {
     }
 
     /**
-     * Getter $elected
-     * @return {boolean}
-     */
-    public get $elected(): boolean {
-        return this.elected;
-    }
-
-    /**
-     * Getter $itemList
-     * @return {FilterItem[]}
-     */
-    public get $itemList(): FilterItem[] {
-        return this.itemList;
-    }
-
-    /**
      * Setter $name
      * @param {string} value
      */
@@ -56,11 +40,27 @@ export class Preset {
     }
 
     /**
+     * Getter $elected
+     * @return {boolean}
+     */
+    public get $elected(): boolean {
+        return this.elected;
+    }
+
+    /**
      * Setter $elected
      * @param {boolean} value
      */
     public set $elected(value: boolean) {
         this.elected = value;
+    }
+
+    /**
+     * Getter $itemList
+     * @return {FilterItem[]}
+     */
+    public get $itemList(): FilterItem[] {
+        return this.itemList;
     }
 
     /**

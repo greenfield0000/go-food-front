@@ -1,4 +1,4 @@
-import { Address } from './address/address.class';
+import {Address} from './address/address.class';
 
 /**
  * Сущность - пользователь
@@ -35,59 +35,19 @@ export class User {
     }
 
     /**
-     * Getter $surName
-     * @return {string }
-     */
-    public get $surName(): string {
-        return this.surName;
-    }
-
-    /**
-     * Getter $lastName
-     * @return {string }
-     */
-    public get $lastName(): string {
-        return this.lastName;
-    }
-
-    /**
-     * Getter $birthDay
-     * @return {Date}
-     */
-    public get $birthDay(): Date {
-        return this.birthDay;
-    }
-
-    /**
-     * Getter $phone
-     * @return {string }
-     */
-    public get $phone(): string {
-        return this.phone;
-    }
-
-    /**
-     * Getter $email
-     * @return {string }
-     */
-    public get $email(): string {
-        return this.email;
-    }
-
-    /**
-     * Getter $addressList
-     * @return {Array<Address> }
-     */
-    public get $addressList(): Array<Address> {
-        return this.addressList;
-    }
-
-    /**
      * Setter $name
      * @param {string } value
      */
     public set $name(value: string) {
         this.name = value;
+    }
+
+    /**
+     * Getter $surName
+     * @return {string }
+     */
+    public get $surName(): string {
+        return this.surName;
     }
 
     /**
@@ -99,11 +59,27 @@ export class User {
     }
 
     /**
+     * Getter $lastName
+     * @return {string }
+     */
+    public get $lastName(): string {
+        return this.lastName;
+    }
+
+    /**
      * Setter $lastName
      * @param {string } value
      */
     public set $lastName(value: string) {
         this.lastName = value;
+    }
+
+    /**
+     * Getter $birthDay
+     * @return {Date}
+     */
+    public get $birthDay(): Date {
+        return this.birthDay;
     }
 
     /**
@@ -115,6 +91,14 @@ export class User {
     }
 
     /**
+     * Getter $phone
+     * @return {string }
+     */
+    public get $phone(): string {
+        return this.phone;
+    }
+
+    /**
      * Setter $phone
      * @param {string } value
      */
@@ -123,11 +107,27 @@ export class User {
     }
 
     /**
+     * Getter $email
+     * @return {string }
+     */
+    public get $email(): string {
+        return this.email;
+    }
+
+    /**
      * Setter $email
      * @param {string } value
      */
     public set $email(value: string) {
         this.email = value;
+    }
+
+    /**
+     * Getter $addressList
+     * @return {Array<Address> }
+     */
+    public get $addressList(): Array<Address> {
+        return this.addressList;
     }
 
     /**

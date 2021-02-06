@@ -14,10 +14,6 @@ export class JournalButton implements Button {
     cssImageName: string;
     handler: (params?: any) => any;
 
-    private buttonNotImplementedFn: (params?: any) => (void) = function () {
-        alert('Button not implemented!!!');
-    };
-
     constructor(data?: any) {
         if (data) {
             this.name = data && data.name || '';
@@ -25,5 +21,9 @@ export class JournalButton implements Button {
             this.handler = data && data.handler || this.buttonNotImplementedFn;
         }
     }
+
+    private buttonNotImplementedFn: (params?: any) => (void) = function () {
+        alert('Button not implemented!!!');
+    };
 
 }

@@ -1,11 +1,11 @@
-import { Component, Injector } from '@angular/core';
-import { IJournal } from 'src/app/components/journal/journal.interface';
-import { IDialogType } from 'src/app/services/modal-window-service/idialog.type';
-import { DialogComponent } from 'src/app/components/modal-window/common/dialog/dialog.component';
-import { User } from 'src/app/classes/user';
-import { SimpleResult } from 'src/app/utils/simple-result.class';
-import { environment } from 'src/environments/environment';
-import { AbstractJournalMenu } from '../../abstract-journal-menu';
+import {Component, Injector} from '@angular/core';
+import {IJournal} from 'src/app/components/journal/journal.interface';
+import {IDialogType} from 'src/app/services/modal-window-service/idialog.type';
+import {DialogComponent} from 'src/app/components/modal-window/common/dialog/dialog.component';
+import {User} from 'src/app/classes/user';
+import {SimpleResult} from 'src/app/utils/simple-result.class';
+import {environment} from 'src/environments/environment';
+import {AbstractJournalMenu} from '../../abstract-journal-menu';
 
 @Component({
     selector: 'app-personal',
@@ -14,6 +14,10 @@ import { AbstractJournalMenu } from '../../abstract-journal-menu';
 })
 export class PersonalComponent extends AbstractJournalMenu<PersonalComponent> {
 
+
+    constructor(protected serviceInjector: Injector) {
+        super(serviceInjector);
+    }
 
     getJournalHeader(): string {
         return 'Журнал персонала';
@@ -27,19 +31,15 @@ export class PersonalComponent extends AbstractJournalMenu<PersonalComponent> {
         return this;
     }
 
-    constructor(protected serviceInjector: Injector) {
-        super(serviceInjector);
-    }
-
     /**
      * Создание нового пользователя
      * @param selectedRow выбранная запись в сетке данных
      * @param appRouteService роутер для перехода на другие страницы
      */
-    public createNewPerson(context: IJournal<PersonalComponent>) {
+    public createNewPerson(selectedRow: any, context: IJournal<PersonalComponent>) {
         const localContext: PersonalComponent = <PersonalComponent>context;
         localContext._personalService.$user = new User();
-        localContext._appRouterService.goTo('dashbord/personal/add');
+        localContext._appRouterService.goTo('dashboard/personal/add');
     }
 
     /**
@@ -57,7 +57,7 @@ export class PersonalComponent extends AbstractJournalMenu<PersonalComponent> {
             return;
         }
         localContext._personalService.$user = new User(selectedRow);
-        localContext._appRouterService.goTo('dashbord/personal/edit');
+        localContext._appRouterService.goTo('dashboard/personal/edit');
     }
 
     /**

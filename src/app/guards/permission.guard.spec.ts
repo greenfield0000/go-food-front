@@ -1,6 +1,6 @@
-import { inject, TestBed } from '@angular/core/testing';
+import {inject, TestBed} from '@angular/core/testing';
 
-import { PermissionGuard } from './permission.guard';
+import {PermissionGuard} from './permission.guard';
 
 describe('PermissionGuard', () => {
     beforeEach(() => {

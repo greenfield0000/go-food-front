@@ -1,11 +1,11 @@
-import { Directive, HostBinding, Injector, OnInit, ViewChild } from '@angular/core';
-import { IJournal } from 'src/app/components/journal/journal.interface';
-import { JournalComponent } from 'src/app/components/journal/journal.component';
-import { AppRouteService } from 'src/app/services/app-route-service/app-route.service';
-import { PersonalService } from './personal/personal.service';
-import { HttpService } from 'src/app/services/http-service/http.service';
-import { JournalService } from 'src/app/services/journal-service/journal.service';
-import { ModalWindowService } from 'src/app/services/modal-window-service/modal-window.service';
+import {Directive, HostBinding, Injector, OnInit, ViewChild} from '@angular/core';
+import {IJournal} from 'src/app/components/journal/journal.interface';
+import {JournalComponent} from 'src/app/components/journal/journal.component';
+import {AppRouteService} from 'src/app/services/app-route-service/app-route.service';
+import {PersonalService} from './personal/personal.service';
+import {HttpService} from 'src/app/services/http-service/http.service';
+import {JournalService} from 'src/app/services/journal-service/journal.service';
+import {ModalWindowService} from 'src/app/services/modal-window-service/modal-window.service';
 
 /**
  * Общий абстрактный класс для журналов
@@ -14,12 +14,10 @@ import { ModalWindowService } from 'src/app/services/modal-window-service/modal-
 export class AbstractJournalMenu<T> implements OnInit, IJournal<T> {
 
 
-    @HostBinding('class')
-    protected className = 'form';
-
     public journalHeader: string = '';
     @ViewChild('journal', {static: true}) journal: JournalComponent<T>;
-
+    @HostBinding('class')
+    protected className = 'form';
     protected _appRouterService: AppRouteService;
     protected _personalService: PersonalService;
     protected _http: HttpService;
@@ -49,4 +47,5 @@ export class AbstractJournalMenu<T> implements OnInit, IJournal<T> {
     ngOnInit() {
         this.journal.load(this.getJournalSysName());
     }
+
 }

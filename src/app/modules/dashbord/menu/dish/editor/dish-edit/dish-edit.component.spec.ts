@@ -1,20 +1,20 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {RegistryComponent} from './registry.component';
+import {DishEditComponent} from './dish-edit.component';
 
-describe('RegistryComponent', () => {
-    let component: RegistryComponent;
-    let fixture: ComponentFixture<RegistryComponent>;
+describe('DishEditComponent', () => {
+    let component: DishEditComponent;
+    let fixture: ComponentFixture<DishEditComponent>;
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [RegistryComponent]
+            declarations: [DishEditComponent]
         })
             .compileComponents();
     }));
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(RegistryComponent);
+        fixture = TestBed.createComponent(DishEditComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

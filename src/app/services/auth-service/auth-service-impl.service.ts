@@ -1,11 +1,11 @@
-import { switchMap } from 'rxjs/operators';
-import { environment } from 'src/environments/environment';
-import { AccountEntity } from 'src/app/classes/accountEntity';
-import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
-import { Auth } from 'src/app/interfaces/auth';
-import { SimpleResult } from 'src/app/utils/simple-result.class';
-import { HttpService } from '../http-service/http.service';
+import {switchMap} from 'rxjs/operators';
+import {environment} from 'src/environments/environment';
+import {AccountEntity} from 'src/app/classes/accountEntity';
+import {Injectable} from '@angular/core';
+import {Observable, of} from 'rxjs';
+import {Auth} from 'src/app/interfaces/auth';
+import {SimpleResult} from 'src/app/utils/simple-result.class';
+import {HttpService} from '../http-service/http.service';
 
 /**
  * Сервис авторизации и регистрации пользователей в системе

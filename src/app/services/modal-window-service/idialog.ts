@@ -1,4 +1,4 @@
-import { IDialogType } from './idialog.type';
+import {IDialogType} from './idialog.type';
 
 /**
  * Интерфейс предназначен для связывания компонентов

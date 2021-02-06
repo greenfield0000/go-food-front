@@ -1,4 +1,4 @@
-import { User } from './user';
+import {User} from './user';
 
 /**
  * Класс - описывающий данные учетной записи
@@ -32,51 +32,19 @@ export class AccountEntity {
     }
 
     /**
-     * Getter $uuid
-     * @return {string }
-     */
-    public get $uuid(): string {
-        return this.uuid;
-    }
-
-    /**
-     * Getter $login
-     * @return {string }
-     */
-    public get $login(): string {
-        return this.login;
-    }
-
-    /**
-     * Getter $password
-     * @return {string }
-     */
-    public get $password(): string {
-        return this.password;
-    }
-
-    /**
-     * Getter $nickName
-     * @return {string }
-     */
-    public get $nickName(): string {
-        return this.nickName;
-    }
-
-    /**
-     * Getter $user
-     * @return {User }
-     */
-    public get $user(): User {
-        return this.user;
-    }
-
-    /**
      * Setter $id
      * @param {number } value
      */
     public set $id(value: number) {
         this.id = value;
+    }
+
+    /**
+     * Getter $uuid
+     * @return {string }
+     */
+    public get $uuid(): string {
+        return this.uuid;
     }
 
     /**
@@ -88,11 +56,27 @@ export class AccountEntity {
     }
 
     /**
+     * Getter $login
+     * @return {string }
+     */
+    public get $login(): string {
+        return this.login;
+    }
+
+    /**
      * Setter $login
      * @param {string } value
      */
     public set $login(value: string) {
         this.login = value;
+    }
+
+    /**
+     * Getter $password
+     * @return {string }
+     */
+    public get $password(): string {
+        return this.password;
     }
 
     /**
@@ -104,11 +88,27 @@ export class AccountEntity {
     }
 
     /**
+     * Getter $nickName
+     * @return {string }
+     */
+    public get $nickName(): string {
+        return this.nickName;
+    }
+
+    /**
      * Setter $nickName
      * @param {string } value
      */
     public set $nickName(value: string) {
         this.nickName = value;
+    }
+
+    /**
+     * Getter $user
+     * @return {User }
+     */
+    public get $user(): User {
+        return this.user;
     }
 
     /**

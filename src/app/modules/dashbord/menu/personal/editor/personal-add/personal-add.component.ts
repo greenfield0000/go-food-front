@@ -1,8 +1,8 @@
-import { PersonalComponent } from './../../journal-page/personal.component';
-import { Component, Injector, OnInit } from '@angular/core';
-import { User } from 'src/app/classes/user';
-import { SimpleResult } from 'src/app/utils/simple-result.class';
-import { environment } from 'src/environments/environment';
+import {PersonalComponent} from './../../journal-page/personal.component';
+import {Component, Injector, OnInit} from '@angular/core';
+import {User} from 'src/app/classes/user';
+import {SimpleResult} from 'src/app/utils/simple-result.class';
+import {environment} from 'src/environments/environment';
 
 @Component({
     selector: 'personal-add',
@@ -25,7 +25,7 @@ export class PersonalAddComponent extends PersonalComponent implements OnInit {
      * Обработчик кнопки "Вернуться". Возвращает с текущей страницы обратно в журнал
      */
     public back() {
-        this._appRouterService.goTo('dashbord/personal');
+        this._appRouterService.goTo('dashboard/personal');
     }
 
     /**

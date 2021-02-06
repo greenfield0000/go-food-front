@@ -1,11 +1,11 @@
-import { environment } from '../../../environments/environment';
-import { DialogComponent } from '../../components/modal-window/common/dialog/dialog.component';
-import { ModalWindowService } from 'src/app/services/modal-window-service/modal-window.service';
-import { IDialogType } from '../modal-window-service/idialog.type';
-import { Observable, of } from 'rxjs';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { catchError, switchMap } from 'rxjs/operators';
+import {environment} from '../../../environments/environment';
+import {DialogComponent} from '../../components/modal-window/common/dialog/dialog.component';
+import {ModalWindowService} from 'src/app/services/modal-window-service/modal-window.service';
+import {IDialogType} from '../modal-window-service/idialog.type';
+import {Observable, of} from 'rxjs';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {Injectable} from '@angular/core';
+import {catchError, switchMap} from 'rxjs/operators';
 
 /**
  * Общий сервис
@@ -19,18 +19,6 @@ export class HttpService {
   Попробуйте выполнить данное действие через некоторое время.`;
 
     constructor(private http: HttpClient, private modalWindow: ModalWindowService) {
-    }
-
-    private handleResponse<T>(result: T): Observable<any> {
-        const simpleResult: any = Object.assign({}, result);
-        console.log('handleResponse = ', result);
-        if ((!simpleResult) || ((simpleResult) && (simpleResult.status) && (simpleResult.status.toString() === 'ERROR'))) {
-            const messageInfo: string = simpleResult && simpleResult.message || this.defaultErrorMessage;
-            return this.modalWindow.openDialog(IDialogType.INFO, DialogComponent, {
-                message: messageInfo
-            });
-        }
-        return of(result);
     }
 
     /**
@@ -98,5 +86,17 @@ export class HttpService {
                 return of({});
             })
         );
+    }
+
+    private handleResponse<T>(result: T): Observable<any> {
+        const simpleResult: any = Object.assign({}, result);
+        console.log('handleResponse = ', result);
+        if ((!simpleResult) || ((simpleResult) && (simpleResult.status) && (simpleResult.status.toString() === 'ERROR'))) {
+            const messageInfo: string = simpleResult && simpleResult.message || this.defaultErrorMessage;
+            return this.modalWindow.openDialog(IDialogType.INFO, DialogComponent, {
+                message: messageInfo
+            });
+        }
+        return of(result);
     }
 }

@@ -1,10 +1,10 @@
-import { MainOutletComponent } from 'src/app/outlets/main-outlet/main-outlet.component';
-import { RouterModule, Routes } from '@angular/router';
-import { NgModule } from '@angular/core';
-import { HeaderOutletComponent } from '../../outlets/header-outlet/header-outlet.component';
-import { FooterOutletComponent } from '../../outlets/footer-outlet/footer-outlet.component';
-import { MenuModule } from './menu/menu.module';
-import { PermissionGuard } from 'src/app/guards/permission.guard';
+import {MainOutletComponent} from 'src/app/outlets/main-outlet/main-outlet.component';
+import {RouterModule, Routes} from '@angular/router';
+import {NgModule} from '@angular/core';
+import {HeaderOutletComponent} from '../../outlets/header-outlet/header-outlet.component';
+import {FooterOutletComponent} from '../../outlets/footer-outlet/footer-outlet.component';
+import {MenuModule} from './menu/menu.module';
+import {PermissionGuard} from 'src/app/guards/permission.guard';
 
 const routes: Routes = [
     {path: '', component: HeaderOutletComponent, outlet: 'headerOutlet'},

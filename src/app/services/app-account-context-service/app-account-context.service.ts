@@ -29,7 +29,7 @@ export class AppAccountContextService {
         this._authService.signIn(loginData)
             .subscribe((account: AccountEntity) => {
                 this._account = account;
-                this.temp.goTo('/dashbord');
+                this.temp.goTo('/dashboard');
             });
     }
 

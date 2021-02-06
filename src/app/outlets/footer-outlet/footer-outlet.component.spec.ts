@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { FooterOutletComponent } from './footer-outlet.component';
+import {FooterOutletComponent} from './footer-outlet.component';
 
 describe('FooterOutletComponent', () => {
     let component: FooterOutletComponent;

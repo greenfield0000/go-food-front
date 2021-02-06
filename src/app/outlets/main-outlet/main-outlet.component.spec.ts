@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { MainOutletComponent } from './main-outlet.component';
+import {MainOutletComponent} from './main-outlet.component';
 
 describe('MainOutletComponent', () => {
     let component: MainOutletComponent;

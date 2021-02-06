@@ -1,7 +1,7 @@
-import { KladrService } from 'src/app/services/kladr-service/kladr.service';
-import { AppAccountContextService } from './../../../services/app-account-context-service/app-account-context.service';
-import { AppRouteService } from './../../../services/app-route-service/app-route.service';
-import { Component, OnInit } from '@angular/core';
+import {KladrService} from 'src/app/services/kladr-service/kladr.service';
+import {AppAccountContextService} from './../../../services/app-account-context-service/app-account-context.service';
+import {AppRouteService} from './../../../services/app-route-service/app-route.service';
+import {Component, OnInit} from '@angular/core';
 
 
 @Component({

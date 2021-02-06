@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { HeaderOutletComponent } from './header-outlet.component';
+import {HeaderOutletComponent} from './header-outlet.component';
 
 describe('HeaderOutletComponent', () => {
     let component: HeaderOutletComponent;

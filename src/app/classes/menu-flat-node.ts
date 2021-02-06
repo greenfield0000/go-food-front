@@ -40,51 +40,19 @@ export class MenuFlatNode {
     }
 
     /**
-     * Getter name
-     * @return {string}
-     */
-    public get $name(): string {
-        return this._name;
-    }
-
-    /**
-     * Getter level
-     * @return {number}
-     */
-    public get $level(): number {
-        return this._level;
-    }
-
-    /**
-     * Getter pathOfDash
-     * @return {string}
-     */
-    public get $pathOfDash(): string {
-        return this._pathOfDash;
-    }
-
-    /**
-     * Getter image
-     * @return {string}
-     */
-    public get $image(): string {
-        return this._image;
-    }
-
-    /**
-     * Getter offset
-     * @return {string }
-     */
-    public get $offset(): string {
-        return this._offset;
-    }
-
-    /**
      * Setter expandable
      * @param {boolean} value
      */
     public set $expandable(value: boolean) {
         this._expandable = value;
+    }
+
+    /**
+     * Getter name
+     * @return {string}
+     */
+    public get $name(): string {
+        return this._name;
     }
 
     /**
@@ -96,11 +64,27 @@ export class MenuFlatNode {
     }
 
     /**
+     * Getter level
+     * @return {number}
+     */
+    public get $level(): number {
+        return this._level;
+    }
+
+    /**
      * Setter level
      * @param {number} value
      */
     public set $level(value: number) {
         this._level = value;
+    }
+
+    /**
+     * Getter pathOfDash
+     * @return {string}
+     */
+    public get $pathOfDash(): string {
+        return this._pathOfDash;
     }
 
     /**
@@ -112,11 +96,27 @@ export class MenuFlatNode {
     }
 
     /**
+     * Getter image
+     * @return {string}
+     */
+    public get $image(): string {
+        return this._image;
+    }
+
+    /**
      * Setter image
      * @param {string} value
      */
     public set $image(value: string) {
         this._image = value;
+    }
+
+    /**
+     * Getter offset
+     * @return {string }
+     */
+    public get $offset(): string {
+        return this._offset;
     }
 
     /**

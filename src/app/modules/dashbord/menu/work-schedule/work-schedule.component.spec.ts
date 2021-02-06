@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { WorkScheduleComponent } from './work-schedule.component';
+import {WorkScheduleComponent} from './work-schedule.component';
 
 describe('WorkScheduleComponent', () => {
     let component: WorkScheduleComponent;

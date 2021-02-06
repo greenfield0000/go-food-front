@@ -1,7 +1,7 @@
-import { environment } from 'src/environments/environment';
-import { Injectable } from '@angular/core';
-import { AddressItemType } from 'src/app/components/address-kladr/model/address-emiter.model';
-import { HttpService } from '../http-service/http.service';
+import {environment} from 'src/environments/environment';
+import {Injectable} from '@angular/core';
+import {AddressItemType} from 'src/app/components/address-kladr/model/address-emiter.model';
+import {HttpService} from '../http-service/http.service';
 
 /**
  * Сервис для работы с кладром

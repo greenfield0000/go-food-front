@@ -1,5 +1,5 @@
-import { Component, Injector } from '@angular/core';
-import { AbstractJournalMenu } from '../abstract-journal-menu';
+import {Component, Injector} from '@angular/core';
+import {AbstractJournalMenu} from '../abstract-journal-menu';
 
 @Component({
     selector: 'app-menu',
@@ -7,6 +7,10 @@ import { AbstractJournalMenu } from '../abstract-journal-menu';
     styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent extends AbstractJournalMenu<MenuComponent> {
+
+    constructor(protected serviceInjector: Injector) {
+        super(serviceInjector);
+    }
 
     getJournalHeader(): string {
         return 'Журнал "Меню"';
@@ -18,10 +22,6 @@ export class MenuComponent extends AbstractJournalMenu<MenuComponent> {
 
     getComponentContext(): MenuComponent {
         return this;
-    }
-
-    constructor(protected serviceInjector: Injector) {
-        super(serviceInjector);
     }
 
 }

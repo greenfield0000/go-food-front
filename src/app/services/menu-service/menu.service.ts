@@ -1,10 +1,10 @@
-import { environment } from './../../../environments/environment';
-import { AppAccountContextService } from './../app-account-context-service/app-account-context.service';
-import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
-import { MenuNode } from 'src/app/classes/menu-node';
-import { SimpleResult } from 'src/app/utils/simple-result.class';
-import { HttpService } from '../http-service/http.service';
+import {environment} from './../../../environments/environment';
+import {AppAccountContextService} from './../app-account-context-service/app-account-context.service';
+import {Injectable} from '@angular/core';
+import {BehaviorSubject, Observable} from 'rxjs';
+import {MenuNode} from 'src/app/classes/menu-node';
+import {SimpleResult} from 'src/app/utils/simple-result.class';
+import {HttpService} from '../http-service/http.service';
 
 /**
  * File database, it can build a tree structured Json object from string.
@@ -20,12 +20,12 @@ export class MenuService {
 
     dataChange = new BehaviorSubject<MenuNode[]>([]);
 
-    get data(): MenuNode[] {
-        return this.dataChange.value;
-    }
-
     constructor(private http: HttpService, private accountService: AppAccountContextService) {
 //    this.initialize();
+    }
+
+    get data(): MenuNode[] {
+        return this.dataChange.value;
     }
 
     loadMenu(): Observable<SimpleResult<string>> {

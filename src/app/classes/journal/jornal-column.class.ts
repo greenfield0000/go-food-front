@@ -26,43 +26,19 @@ export class JornalColumn {
     }
 
     /**
-     * Getter $field
-     * @return {string}
-     */
-    public get $field(): string {
-        return this.field;
-    }
-
-    /**
-     * Getter $sortable
-     * @return {boolean}
-     */
-    public get $sortable(): boolean {
-        return this.sortable;
-    }
-
-    /**
-     * Getter $filter
-     * @return {boolean}
-     */
-    public get $filter(): boolean {
-        return this.filter;
-    }
-
-    /**
-     * Getter $checkboxSelection
-     * @return {boolean}
-     */
-    public get $checkboxSelection(): boolean {
-        return this.checkboxSelection;
-    }
-
-    /**
      * Setter $headerName
      * @param {string} value
      */
     public set $headerName(value: string) {
         this.headerName = value;
+    }
+
+    /**
+     * Getter $field
+     * @return {string}
+     */
+    public get $field(): string {
+        return this.field;
     }
 
     /**
@@ -74,6 +50,14 @@ export class JornalColumn {
     }
 
     /**
+     * Getter $sortable
+     * @return {boolean}
+     */
+    public get $sortable(): boolean {
+        return this.sortable;
+    }
+
+    /**
      * Setter $sortable
      * @param {boolean} value
      */
@@ -82,11 +66,27 @@ export class JornalColumn {
     }
 
     /**
+     * Getter $filter
+     * @return {boolean}
+     */
+    public get $filter(): boolean {
+        return this.filter;
+    }
+
+    /**
      * Setter $filter
      * @param {boolean} value
      */
     public set $filter(value: boolean) {
         this.filter = value;
+    }
+
+    /**
+     * Getter $checkboxSelection
+     * @return {boolean}
+     */
+    public get $checkboxSelection(): boolean {
+        return this.checkboxSelection;
     }
 
     /**

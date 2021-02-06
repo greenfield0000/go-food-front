@@ -1,49 +1,50 @@
-import { IDialog } from 'src/app/services/modal-window-service/idialog';
-import { Injectable, OnDestroy } from '@angular/core';
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { ComponentType } from '@angular/cdk/overlay/index';
-import { Subscription, Observable } from 'rxjs';
-import { IDialogType } from './idialog.type';
+import {IDialog} from 'src/app/services/modal-window-service/idialog';
+import {Injectable, OnDestroy} from '@angular/core';
+import {MatDialog, MatDialogRef} from '@angular/material/dialog';
+import {ComponentType} from '@angular/cdk/overlay/index';
+import {Observable, Subscription} from 'rxjs';
+import {IDialogType} from './idialog.type';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class ModalWindowService implements OnDestroy {
 
-  private subscriptions: Array<Subscription> = new Array();
-  private dialogComponent: IDialog;
-  private windowWidthPX: string = '800';
-  private windowHeightPX: string = '500';
-  private dialogRef: MatDialogRef<IDialog, any>;
+    private subscriptions: Array<Subscription> = [];
+    private dialogComponent: IDialog;
+    private windowWidthPX: string = '800';
+    private windowHeightPX: string = '500';
+    private dialogRef: MatDialogRef<IDialog, any>;
 
-  constructor(public dialog: MatDialog) { }
-
-  openDialog(type: IDialogType, dialogComponent: ComponentType<IDialog>, dataContext?: any): Observable<any> {
-    dataContext = dataContext ? dataContext : {};
-    this.dialogComponent = dialogComponent.prototype;
-    this.dialogComponent.type = type;
-    if (!this.dialogRef) {
-      this.dialogRef = this.dialog.open(dialogComponent, {
-        data: dataContext,
-        maxWidth: this.windowWidthPX,
-        maxHeight: this.windowHeightPX,
-        width: this.windowWidthPX,
-        height: this.windowWidthPX
-      });
+    constructor(public dialog: MatDialog) {
     }
-  
-    const closed: Observable<any> = this.dialogRef.afterClosed();
-    this.subscriptions.push(closed.subscribe(result => {
-      this.dialogRef = null;
-    }));
 
-    return closed;
-  }
+    openDialog(type: IDialogType, dialogComponent: ComponentType<IDialog>, dataContext?: any): Observable<any> {
+        dataContext = dataContext ? dataContext : {};
+        this.dialogComponent = dialogComponent.prototype;
+        this.dialogComponent.type = type;
+        if (!this.dialogRef) {
+            this.dialogRef = this.dialog.open(dialogComponent, {
+                data: dataContext,
+                maxWidth: this.windowWidthPX,
+                maxHeight: this.windowHeightPX,
+                width: this.windowWidthPX,
+                height: this.windowWidthPX
+            });
+        }
 
-  ngOnDestroy(): void {
-    if (this.subscriptions) {
-      this.subscriptions.forEach(sub => sub.unsubscribe());
+        const closed: Observable<any> = this.dialogRef.afterClosed();
+        this.subscriptions.push(closed.subscribe(result => {
+            this.dialogRef = null;
+        }));
+
+        return closed;
     }
-  }
+
+    ngOnDestroy(): void {
+        if (this.subscriptions) {
+            this.subscriptions.forEach(sub => sub.unsubscribe());
+        }
+    }
 
 }

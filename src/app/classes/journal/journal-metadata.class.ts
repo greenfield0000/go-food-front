@@ -1,6 +1,6 @@
-import { JournalButton } from './journal-button.class';
-import { ColumnMetaData } from './journal-column-metadata.class';
-import { Preset } from './journal-preset.class';
+import {JournalButton} from './journal-button.class';
+import {ColumnMetaData} from './journal-column-metadata.class';
+import {Preset} from './journal-preset.class';
 
 /**
  * Объект сущности "Журнал"

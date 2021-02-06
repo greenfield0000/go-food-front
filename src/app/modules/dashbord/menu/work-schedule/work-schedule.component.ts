@@ -1,12 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGrigPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import bootstrapPlugin from '@fullcalendar/bootstrap';
 import listPlugin from '@fullcalendar/list';
 import ruLocale from '@fullcalendar/core/locales/ru';
-import { CalendarOptions, EventApi, DateSelectArg, EventClickArg } from '@fullcalendar/core';
-import { EventInput } from '@fullcalendar/angular';
+import {CalendarOptions, DateSelectArg, EventApi, EventClickArg} from '@fullcalendar/core';
+import {EventInput} from '@fullcalendar/angular';
 
 let eventGuid = 0;
 const TODAY_STR = new Date().toISOString().replace(/T.*$/, ''); // YYYY-MM-DD of today
@@ -39,22 +39,13 @@ export class WorkScheduleComponent implements OnInit {
     public calendarPlugins = [dayGridPlugin, timeGrigPlugin, interactionPlugin, listPlugin, bootstrapPlugin];
     public calendarWeekends = true;
     public themeSystem = 'Litera';
-
-    constructor() {
-    }
-
-    ngOnInit() {
-    }
-
     calendarVisible = true;
     calendarOptions: CalendarOptions = {
         height: 535,
         themeSystem: this.themeSystem,
         plugins: this.calendarPlugins,
         locale: ruLocale,
-        allDayClassNames: [
-            
-        ],
+        allDayClassNames: [],
         headerToolbar: {
             left: 'prev,next',
             center: 'title',
@@ -83,12 +74,18 @@ export class WorkScheduleComponent implements OnInit {
     };
     currentEvents: EventApi[] = [];
 
+    constructor() {
+    }
+
+    ngOnInit() {
+    }
+
     handleCalendarToggle() {
         this.calendarVisible = !this.calendarVisible;
     }
 
     handleWeekendsToggle() {
-        const { calendarOptions } = this;
+        const {calendarOptions} = this;
         calendarOptions.weekends = !calendarOptions.weekends;
     }
 

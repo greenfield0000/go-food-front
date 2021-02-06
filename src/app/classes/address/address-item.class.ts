@@ -1,5 +1,5 @@
-import { AddressItemType } from 'src/app/components/address-kladr/model/address-emiter.model';
-import { AddressModel } from '../../components/address-kladr/model/address.model';
+import {AddressItemType} from 'src/app/components/address-kladr/model/address-emiter.model';
+import {AddressModel} from '../../components/address-kladr/model/address.model';
 
 export class AddressItem {
     private cadnum: string;
@@ -44,107 +44,19 @@ export class AddressItem {
     }
 
     /**
-     * Getter $contentType
-     * @return {AddressItemType}
-     */
-    public get $contentType(): AddressItemType {
-        return this.contentType;
-    }
-
-    /**
-     * Getter $guid
-     * @return {string}
-     */
-    public get $guid(): string {
-        return this.guid;
-    }
-
-    /**
-     * Getter $id
-     * @return {string}
-     */
-    public get $id(): string {
-        return this.id;
-    }
-
-    /**
-     * Getter $ifnsfl
-     * @return {string}
-     */
-    public get $ifnsfl(): string {
-        return this.ifnsfl;
-    }
-
-    /**
-     * Getter $ifnsul
-     * @return {string}
-     */
-    public get $ifnsul(): string {
-        return this.ifnsul;
-    }
-
-    /**
-     * Getter $name
-     * @return {string}
-     */
-    public get $name(): string {
-        return this.name;
-    }
-
-    /**
-     * Getter $okato
-     * @return {string}
-     */
-    public get $okato(): string {
-        return this.okato;
-    }
-
-    /**
-     * Getter $oktmo
-     * @return {string}
-     */
-    public get $oktmo(): string {
-        return this.oktmo;
-    }
-
-    /**
-     * Getter $parentGuid
-     * @return {string}
-     */
-    public get $parentGuid(): string {
-        return this.parentGuid;
-    }
-
-    /**
-     * Getter $type
-     * @return {string}
-     */
-    public get $type(): string {
-        return this.type;
-    }
-
-    /**
-     * Getter $typeShort
-     * @return {string}
-     */
-    public get $typeShort(): string {
-        return this.typeShort;
-    }
-
-    /**
-     * Getter $zip
-     * @return {number}
-     */
-    public get $zip(): number {
-        return this.zip;
-    }
-
-    /**
      * Setter $cadnum
      * @param {string} value
      */
     public set $cadnum(value: string) {
         this.cadnum = value;
+    }
+
+    /**
+     * Getter $contentType
+     * @return {AddressItemType}
+     */
+    public get $contentType(): AddressItemType {
+        return this.contentType;
     }
 
     /**
@@ -156,11 +68,27 @@ export class AddressItem {
     }
 
     /**
+     * Getter $guid
+     * @return {string}
+     */
+    public get $guid(): string {
+        return this.guid;
+    }
+
+    /**
      * Setter $guid
      * @param {string} value
      */
     public set $guid(value: string) {
         this.guid = value;
+    }
+
+    /**
+     * Getter $id
+     * @return {string}
+     */
+    public get $id(): string {
+        return this.id;
     }
 
     /**
@@ -172,11 +100,27 @@ export class AddressItem {
     }
 
     /**
+     * Getter $ifnsfl
+     * @return {string}
+     */
+    public get $ifnsfl(): string {
+        return this.ifnsfl;
+    }
+
+    /**
      * Setter $ifnsfl
      * @param {string} value
      */
     public set $ifnsfl(value: string) {
         this.ifnsfl = value;
+    }
+
+    /**
+     * Getter $ifnsul
+     * @return {string}
+     */
+    public get $ifnsul(): string {
+        return this.ifnsul;
     }
 
     /**
@@ -188,11 +132,27 @@ export class AddressItem {
     }
 
     /**
+     * Getter $name
+     * @return {string}
+     */
+    public get $name(): string {
+        return this.name;
+    }
+
+    /**
      * Setter $name
      * @param {string} value
      */
     public set $name(value: string) {
         this.name = value;
+    }
+
+    /**
+     * Getter $okato
+     * @return {string}
+     */
+    public get $okato(): string {
+        return this.okato;
     }
 
     /**
@@ -204,11 +164,27 @@ export class AddressItem {
     }
 
     /**
+     * Getter $oktmo
+     * @return {string}
+     */
+    public get $oktmo(): string {
+        return this.oktmo;
+    }
+
+    /**
      * Setter $oktmo
      * @param {string} value
      */
     public set $oktmo(value: string) {
         this.oktmo = value;
+    }
+
+    /**
+     * Getter $parentGuid
+     * @return {string}
+     */
+    public get $parentGuid(): string {
+        return this.parentGuid;
     }
 
     /**
@@ -220,6 +196,14 @@ export class AddressItem {
     }
 
     /**
+     * Getter $type
+     * @return {string}
+     */
+    public get $type(): string {
+        return this.type;
+    }
+
+    /**
      * Setter $type
      * @param {string} value
      */
@@ -228,11 +212,27 @@ export class AddressItem {
     }
 
     /**
+     * Getter $typeShort
+     * @return {string}
+     */
+    public get $typeShort(): string {
+        return this.typeShort;
+    }
+
+    /**
      * Setter $typeShort
      * @param {string} value
      */
     public set $typeShort(value: string) {
         this.typeShort = value;
+    }
+
+    /**
+     * Getter $zip
+     * @return {number}
+     */
+    public get $zip(): number {
+        return this.zip;
     }
 
     /**

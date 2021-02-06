@@ -1,10 +1,6 @@
-import { Status } from './status.class';
+import {Status} from './status.class';
 
 export class SimpleResult<T> {
-    private _status: Status;
-    private _message: string;
-    private _result: T;
-
     constructor(data?: any) {
         if (data) {
             this._status = data.status;
@@ -12,6 +8,8 @@ export class SimpleResult<T> {
             this._result = data.result;
         }
     }
+
+    private _status: Status;
 
     /**
      * Getter status
@@ -29,6 +27,8 @@ export class SimpleResult<T> {
         this.status = value;
     }
 
+    private _message: string;
+
     /**
      * Getter message
      * @return {string}
@@ -44,6 +44,8 @@ export class SimpleResult<T> {
     public set message(value: string) {
         this.message = value;
     }
+
+    private _result: T;
 
     /**
      * Getter result

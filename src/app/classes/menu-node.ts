@@ -22,51 +22,19 @@ export class MenuNode {
     }
 
     /**
-     * Getter $name
-     * @return {string}
-     */
-    public get $name(): string {
-        return this.name;
-    }
-
-    /**
-     * Getter $sysName
-     * @return {string}
-     */
-    public get $sysName(): string {
-        return this.sysName;
-    }
-
-    /**
-     * Getter $pathOfDash
-     * @return {string}
-     */
-    public get $pathOfDash(): string {
-        return this.pathOfDash;
-    }
-
-    /**
-     * Getter $type
-     * @return {any}
-     */
-    public get $type(): any {
-        return this.type;
-    }
-
-    /**
-     * Getter $que
-     * @return {string}
-     */
-    public get $que(): string {
-        return this.que;
-    }
-
-    /**
      * Setter $children
      * @param {MenuNode[]} value
      */
     public set $children(value: MenuNode[]) {
         this.children = value;
+    }
+
+    /**
+     * Getter $name
+     * @return {string}
+     */
+    public get $name(): string {
+        return this.name;
     }
 
     /**
@@ -78,11 +46,27 @@ export class MenuNode {
     }
 
     /**
+     * Getter $sysName
+     * @return {string}
+     */
+    public get $sysName(): string {
+        return this.sysName;
+    }
+
+    /**
      * Setter $sysName
      * @param {string} value
      */
     public set $sysName(value: string) {
         this.sysName = value;
+    }
+
+    /**
+     * Getter $pathOfDash
+     * @return {string}
+     */
+    public get $pathOfDash(): string {
+        return this.pathOfDash;
     }
 
     /**
@@ -94,11 +78,27 @@ export class MenuNode {
     }
 
     /**
+     * Getter $type
+     * @return {any}
+     */
+    public get $type(): any {
+        return this.type;
+    }
+
+    /**
      * Setter $type
      * @param {any} value
      */
     public set $type(value: any) {
         this.type = value;
+    }
+
+    /**
+     * Getter $que
+     * @return {string}
+     */
+    public get $que(): string {
+        return this.que;
     }
 
     /**
@@ -135,19 +135,19 @@ export class MenuNode {
     }
 
     /**
-     * Getter $offset
-     * @return {string }
-     */
-    public get $offset(): string {
-        return this.offset;
-    }
-
-    /**
      * Setter $level
      * @param {string} value
      */
     public set $level(value: string) {
         this.level = value;
+    }
+
+    /**
+     * Getter $offset
+     * @return {string }
+     */
+    public get $offset(): string {
+        return this.offset;
     }
 
     /**
